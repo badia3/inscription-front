@@ -1,0 +1,68 @@
+<div class="form-container">
+  <h1 class="form-title">Formulaire de Demande de Bourse d'Études</h1>
+  <p class="form-description">
+    Bienvenue sur notre système de Candidature Pédagogique en ligne. Pour que votre candidature soit traitée par notre
+    université, vous devez compléter cette candidature en ligne avant le 1er Septembre 2023. La candidature en ligne est
+    gratuite et vous permet de nous faire parvenir tous les documents nécessaires via ce Formulaire de Candidature
+    Scolaire.
+  </p>
+
+  <form class="scholarship-form" [formGroup]="scholarshipForm">
+    <fieldset class="form-section">
+      <legend class="section-title">Détails Personnels</legend>
+      <div class="form-group">
+        <label for="first-name" class="form-label">Nom:</label>
+        <input type="text" class="form-input" required formControlName="nom">
+      </div>
+      <div class="form-group">
+        <label for="last-name" class="form-label">Prénom:</label>
+        <input type="text" class="form-input" required formControlName="prenom">
+      </div>
+      <div class="form-group">
+        <label for="birthdate" class="form-label">Date de Naissance:</label>
+        <input type="date" class="form-input" required formControlName="date" [value]="formattedDate">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Sexe:</label>
+        <input type="radio" value="masculin" class="form-input test" required formControlName="gender">
+        <label for="male">Masculin</label>
+        <input type="radio" value="féminin" class="form-input test" required formControlName="gender">
+        <label for="female">Féminin</label>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-input" required formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="telephone" class="form-label">Telephone:</label>
+        <input type="number" class="form-input" required formControlName="telephone">
+      </div>
+      <div class="form-group">
+        <label for="mailing-address" class="form-label">Street Address:</label>
+        <input type="text" class="form-input" required formControlName="address">
+      </div>
+
+      <div class="form-group">
+        <label for="city" class="form-label">City:</label>
+        <input type="text" class="form-input" required formControlName="city">
+      </div>
+      <div class="form-group">
+        <label for="region" class="form-label">Region:</label>
+        <input type="text" class="form-input" formControlName="region">
+      </div>
+      <div class="form-group">
+        <label for="postal-code" class="form-label">Postal / Zip Code:</label>
+        <input type="number" class="form-input" required formControlName="postal">
+      </div>
+      <div class="form-group">
+        <label for="country" class="form-label">Country:</label>
+        <input type="text" class="form-input" required formControlName="country">
+      </div>
+    </fieldset>
+
+
+
+    <button class="submit-button" (click)="addDemande()">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+.brand{
+height: 6rem;
+padding-left: 2rem;
+padding-right: 2rem;
+background-color: rgb(255, 0, 0) !important;
+
+
+}
+.logo{
+    Font-Family: “myriad-pro-1”, “myriad-pro-2”, HelveticaNeue, Helvetica, Arial, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+}
+.navtext{
+    font-size: 1.4rem;
+    
+    
+}
+.navtext a{
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.transparent-nav {
+    background-color: transparent !important;
+  }

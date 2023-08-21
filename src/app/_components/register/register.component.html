@@ -1,0 +1,70 @@
+
+<body>
+
+
+  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1 class="title">Registration</h1>
+
+          </div>
+          <form [formGroup]="userForm" (ngSubmit)="register()">
+            <div class="mb-3">
+              <label class="form-label">Nom</label>
+              <input type="text" class="form-control" required formControlName="firstname" placeholder="Nom">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Prénom</label>
+              <input type="text" class="form-control" required formControlName="lastname" placeholder="Prénom">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required formControlName="email" placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Téléphone</label>
+              <input type="number" class="form-control" required formControlName="phone" placeholder="Téléphone">
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Mot de passe</label>
+              <div class="input-with-icon">
+                <input [type]="showPassword['password'] ? 'text' : 'password'" required class="form-control" id="password"
+                  placeholder="Mot de passe" formControlName="password">
+                <fa-icon (click)="toggleShow('password')" [icon]="showPassword['password'] ? eyeIcon : eyeSlashIcon"
+                  class="eye-icon"></fa-icon>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label id="confirmPassword" class="form-label">Confirme Mot de passe</label>
+              <div class="input-with-icon">
+                <input [type]="showPassword['confirmPassword'] ? 'text' : 'password'" required class="form-control"
+                  id="confirmPassword" placeholder="Mot de passe" formControlName="confirmPassword">
+                <fa-icon (click)="toggleShow('confirmPassword')" [icon]="showPassword['confirmPassword'] ?  eyeIcon : eyeSlashIcon"
+                  class="eye-icon"></fa-icon>
+                <div class="text-danger" *ngIf="passwordConfirmationMismatch()">
+                  confirmation Password  does not match Password.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Admin</label>
+              <input type="radio" class="check" (change)="onRoleChange($event)" [checked]="defaultRole === Roles.ADMIN">
+            </div>
+            
+
+            <div class="d-flex justify-content-center">
+              <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary">REGISTER</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

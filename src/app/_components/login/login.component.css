@@ -1,0 +1,79 @@
+ .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+} 
+body{
+    background: hsla(205,46%,30%,1) !important;
+    background: linear-gradient(90deg, hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%) !important;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    color: #fff;
+    font-size: 45px;
+    padding-bottom: 25px
+}
+
+.card{
+    margin-top: 4rem;
+    border: none;
+    width: 800px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    font-size: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    
+}
+.container{
+    margin-top:50% ;
+    margin-left: 30%;
+    
+}
+.card label h1{
+    color: #fff;
+
+}
+label{
+    color: #fff;
+}
+.eye-icon{
+    position: absolute;
+    bottom: 26.5%;
+    right: 8%;
+    cursor: pointer;
+    color: rgb(75, 75, 75);
+  
+}
+
+.eye-icon1{
+    position: absolute;
+    bottom: 13.7%;
+    right: 8%;
+    cursor: pointer;
+    color: rgb(75, 75, 75);
+  
+}
+.form-control{
+    height: 3rem;
+}
+.btn{
+    width: 10rem;
+    height: 3rem;
+    margin-top: 25px;
+}
+

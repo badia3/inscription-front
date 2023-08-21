@@ -1,0 +1,46 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+  <h1>Profile</h1>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Profile Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon>person</mat-icon>
+          <div class="data-container">
+            <p><strong>Nom:</strong> {{ currentUser.nom }}</p>
+          </div>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>person</mat-icon>
+          <div class="data-container">
+            <p><strong>Prénom:</strong> {{ currentUser.prenom }}</p>
+          </div>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>email</mat-icon>
+          <div class="data-container">
+            <p><strong>Email:</strong> {{ currentUser.email }}</p>
+          </div>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>phone</mat-icon>
+          <div class="data-container">
+            <p><strong>Téléphone:</strong> {{ currentUser.telephone }}</p>
+          </div>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>badge</mat-icon>
+          <div class="data-container">
+            <p><strong>Rôle:</strong> {{ currentUser.role }}</p>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>

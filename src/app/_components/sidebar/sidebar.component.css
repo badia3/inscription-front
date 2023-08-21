@@ -1,0 +1,24 @@
+.sidebar-container {
+    height: 100vh;
+     /* Adjust this based on your app's header height */
+  }
+  
+  .sidebar {
+    width: 300px; /* Adjust the width of the sidebar as needed */
+    background-color:rgba(0, 0, 0, 0.2); /* Set the background color for the sidebar */
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+ 
+  
+  .sidebar-label {
+    margin-left: 16px;
+  }
+  
+  .active-link {
+    background-color: rgb(132, 132, 132); /* Customize the active link background color */
+  }
+  .sideBar{
+    display: flex !important;
+  }
+  
